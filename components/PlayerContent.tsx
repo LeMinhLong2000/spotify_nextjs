@@ -102,13 +102,13 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
     }
   };
 
-  //   const handleQueue = () => {
-  //     if (path !== "/queue") {
-  //       router.push("/queue");
-  //     } else {
-  //       router.back();
-  //     }
-  //   };
+  const handleQueue = () => {
+    if (path !== "/queue") {
+      router.push("/queue");
+    } else {
+      router.back();
+    }
+  };
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 h-full">
@@ -152,7 +152,7 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       <div className="hidden md:flex w-full justify-end pr-2">
         <div className="flex items-center gap-x-2 w-[180px]">
           <BiMenu
-            // onClick={handleQueue}
+            onClick={handleQueue}
             className="mr-1 cursor-pointer"
             size={26}
             title="Queue"
